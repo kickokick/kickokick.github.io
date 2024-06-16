@@ -4,6 +4,17 @@
         <title>Cat Idle</title>
     </header>
     <body>
+        <script>
+            var count = 0;
+            var counter = document.getElementById("change");
+            function Click(){
+                count = count + 1;
+                counter.innerText = "Count: " + count;
+            }
+        </script>
+        <h1>W</h1>
+        <button onclick="Click();">Click</button>
 
+        <h2 id="change">Count: 0</h2>
     </body>
 </html>
