@@ -10,13 +10,6 @@ function Click(){
     console.log(text);
     counter.textContent = text;
     actionText.textContent = "You clicked";
-    
-    const interval = setInterval(function(){
-        count = count + (autoCount*0.5);
-        text = "Count: " + count;
-        console.log(text);
-        counter.textContent = text;
-    }, 1000);
 }
 
 function Buy(){
@@ -28,3 +21,14 @@ function Buy(){
         actionText.textContent = "sorry pal ur too broke";
     }
 }
+
+function Increment(){
+    const interval = setInterval(function(){
+        count = count + (autoCount*0.5);
+        text = "Count: " + count;
+        console.log(text);
+        counter.textContent = text;
+    }, 100);
+}
+
+counter.addEventListener("load", Increment);
