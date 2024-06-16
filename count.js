@@ -2,8 +2,12 @@
 let count = 0;
 let autoCount = 0;
 let text = "Count: " + count;
+
 const counter = document.getElementById("change");
 const actionText = document.getElementById("action");
+const autoOne = document.getElementById("autoOne");
+
+
 function Click(){
     count = count + 1;
     text = "Count: " + count;
@@ -28,9 +32,6 @@ function Increment(){
         text = "Count: " + count;
         console.log(text);
         counter.textContent = text;
+        autoOne.textContent = "You own " + autoCount + "Automatic Clickers";
     }, 100);
 }
-
-window.onload = (event) => {
-    Increment();
-};
