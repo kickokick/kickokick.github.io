@@ -6,5 +6,6 @@ function Click(){
     count = count + 1;
     text = "Count: " + count;
     console.log(text);
-    counter.textContent = text;
+    counter.innerHTML = text;
+    document.body.appendChild(counter);
 }
