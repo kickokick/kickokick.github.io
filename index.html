@@ -9,7 +9,9 @@
             var counter = document.getElementById("change");
             function Click(){
                 count = count + 1;
-                counter.innerHTML = "Count: " + count;
+                var text = "Count: " + count;
+                console.log(text);
+                counter.appendChild(text);
             }
         </script>
         <h1>W</h1>
