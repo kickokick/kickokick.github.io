@@ -31,4 +31,6 @@ function Increment(){
     }, 100);
 }
 
-counter.addEventListener("load", Increment);
+window.onload = (event) => {
+    Increment();
+};
