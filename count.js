@@ -13,7 +13,7 @@ function Click(){
 }
 
 function Buy(){
-    if (count > 10){
+    if (count >= 10){
         count = count - 10;
         autoCount = autoCount + 1;
         actionText.textContent = "You bought an auto clicker";
@@ -23,6 +23,8 @@ function Buy(){
 }
 
 const interval = setInterval(function(){
-    count = count + (autoCount*0.1);
+    count = count + (autoCount*0.5);
+    text = "Count: " + count;
+    console.log(text);
     counter.textContent = text;
 }, 1000);
