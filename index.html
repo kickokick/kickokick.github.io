@@ -2,20 +2,32 @@
 <html>
     <header>
         <title>Cat Idle</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
     </header>
     <body onload="Increment(); add('bag', 5);">
-        <h1>W</h1>
 
-        <p id="action">Nothing</p>
-
-        <p id="change">Count: 0</p> <p id="autoOne"></p>
         
-        <script type="application/json" src="inventory.json"></script>
-        <script type="text/javascript" src="count.js"></script>
-        <script type="text/javascript" src="inventory.cjs"></script>
+        <nav>
+            <section>
+            <h1 class="NavSect">Super Cat Idol</h1>
+            </section>
+        </nav>
+        
+        
+        <section class="info">
+            <p id="action">Nothing</p>
+
+            <p id="change">Count: 0</p> <p id="autoOne"></p>
+            
+            <script type="application/json" src="inventory.json"></script>
+            <script type="text/javascript" src="count.js"></script>
+            <script type="text/javascript" src="inventory.cjs"></script>
+        </section>
         
         <button onclick="Click();">Click</button>
-
         <button onclick="Buy();">Buy Autoclicker (10 count)</button>
     </body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap');
+    </style>
 </html>
