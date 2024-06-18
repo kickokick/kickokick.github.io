@@ -33,5 +33,5 @@ function Increment(){
         console.log(text);
         counter.textContent = text;
         autoOne.textContent = "You own " + autoCount + "Automatic Clickers";
-    }, 100);
+    }, 1000);
 }
