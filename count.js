@@ -27,11 +27,12 @@ function Buy(){
 }
 
 function Increment(){
-    const interval = setInterval(function(){
-        count = count + (autoCount*0.5);
+    const update = setInterval(function(){
         text = "Count: " + count;
-        console.log(text);
         counter.textContent = text;
         autoOne.textContent = "You own " + autoCount + "Automatic Clickers";
+    }, 100);
+    const increment = setInterval(function(){
+        count = count + (autoCount*0.5);
     }, 1000);
 }
