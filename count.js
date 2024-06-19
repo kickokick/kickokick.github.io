@@ -28,7 +28,8 @@ function Buy(){
 
 function Increment(){
     const update = setInterval(function(){
-        count = count + (autoCount*0.01);
+        count = (count + (autoCount*0.01)) * 100;
+        count = Math.round(count) / 100;
         text = "Count: " + count;
         counter.textContent = text;
         autoOne.textContent = "You own " + autoCount + " Automatic Clickers";
