@@ -75,4 +75,11 @@ nav {
     opacity: .5;
 }
 
+.GameCanvas {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 2rem;
+}
+
 

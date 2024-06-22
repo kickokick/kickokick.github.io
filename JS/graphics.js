@@ -1,7 +1,5 @@
 const app = new PIXI.Application();
-await app.init({ width: 640, height: 360 });
-app.canvas.id = "app";
-document.body.appendChild(app.canvas);
+await app.init({ width: 640, height: 360, view: document.getElementById("app") });
 
 await PIXI.Assets.load('./sample.png');
 let sprite = PIXI.Sprite.from('./sample.png');
