@@ -4,7 +4,7 @@
         <title>Cat Idle</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
     </header>
-    <body onload="Increment(); add('bag', 5);">
+    <body onload="Increment();">
 
         
         <nav>
@@ -16,19 +16,23 @@
         
         <section class="info">
             <p id="action">Nothing</p>
-
+            <p id="inventory"></p>
             <p id="change">Count: 0</p> <p id="autoOne"></p>
             
-            <script type="application/json" src="inventory.json"></script>
-            <script type="text/javascript" src="count.js"></script>
-            <script type="text/javascript" src="inventory.cjs"></script>
+            
         </section>
         <section class="button">
             <button onclick="Click();">Click</button>
             <button onclick="Buy();">Buy Autoclicker (10 count)</button>
+            <section id="shop">
+                <button onclick="buy('yarn')" id="yarn"> Buy FiSH! for </button>
+            </section>
         </section>
     </body>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     </style>
+    <script type="text/javascript" src="./JS/tick.js"></script>
+    <script type="text/javascript" src="./JS/inventory.js"></script>
+    <script type="text/javascript" src="./JS/shop.js"></script>
 </html>

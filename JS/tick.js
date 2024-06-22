@@ -1,7 +1,6 @@
-
-let count = 0;
+let fish = 0;
 let autoCount = 0;
-let text = "Count: " + count;
+let text = "fish: " + fish;
 
 const counter = document.getElementById("change");
 const actionText = document.getElementById("action");
@@ -9,16 +8,16 @@ const autoOne = document.getElementById("autoOne");
 
 
 function Click(){
-    count = count + 1;
-    text = "Count: " + count;
+    fish = fish + 1;
+    text = "fish: " + fish;
     console.log(text);
     counter.textContent = text;
     actionText.textContent = "You clicked";
 }
 
 function Buy(){
-    if (count >= 10){
-        count = count - 10;
+    if (fish >= 10){
+        fish = fish - 10;
         autoCount = autoCount + 1;
         actionText.textContent = "You bought an auto clicker";
     } else {
@@ -28,9 +27,9 @@ function Buy(){
 
 function Increment(){
     const update = setInterval(function(){
-        count = (count + (autoCount*0.01)) * 100;
-        count = Math.round(count) / 100;
-        text = "Count: " + count;
+        fish = (fish + (autoCount*1)) * 100;
+        fish = Math.round(fish) / 100;
+        text = "fish: " + fish;
         counter.textContent = text;
         autoOne.textContent = "You own " + autoCount + " Automatic Clickers";
     }, 100);
