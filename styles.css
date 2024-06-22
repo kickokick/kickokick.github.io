@@ -27,6 +27,7 @@ body {
 
 .button {
     display: flex;
+    border: #B8BFC6;
     align-content: center;
     justify-content: center;
     gap: 10px;
@@ -36,7 +37,6 @@ body {
 button {
     padding: 1rem;
     gap: 1;
-    width: 15%;
     opacity: .75;
     background-color: #FFF6E9;
     text-decoration: none;

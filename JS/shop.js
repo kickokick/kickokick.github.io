@@ -1,7 +1,7 @@
 const shop = {
     yarn: {
         baseCost: 20,
-        growth: 1.07
+        growth: 1.7
     }
 }
 let cost = 0;
@@ -17,5 +17,5 @@ function buy(item) {
         fish -= cost;
         add(item, 1);
     }
-    document.getElementById('yarn').innerHTML = (shop[item].baseCost * Math.pow(shop[item].growth, inventoryJSON[item].num)).toFixed(2);
+    document.getElementById('yarn').innerHTML = "Buy "+ item + "(" + (shop[item].baseCost * Math.pow(shop[item].growth, inventoryJSON[item].num)).toFixed(2) + ")";
 }

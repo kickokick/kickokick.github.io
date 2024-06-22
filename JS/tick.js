@@ -1,5 +1,6 @@
 let fish = 0;
 let autoCount = 0;
+let aCost = 10;
 let text = "fish: " + fish;
 
 const counter = document.getElementById("change");
@@ -16,13 +17,16 @@ function Click(){
 }
 
 function Buy(){
-    if (fish >= 10){
-        fish = fish - 10;
+    if (fish >= aCost){
+        fish = fish - aCost;
         autoCount = autoCount + 1;
         actionText.textContent = "You bought an auto clicker";
     } else {
         actionText.textContent = "sorry pal ur too broke";
     }
+    
+    aCost = (10 * Math.pow(1.5, autoCount)).toFixed(2);
+    document.getElementById("autoclicker").innerHTML = "Buy autoclicker (" + aCost + ")";
 }
 
 function Increment(){
