@@ -1,5 +1,4 @@
-
-let inventoryJSON = require("./inventory.json");
+let inventoryJSON = {};
 
 function add(item, count){
     if (inventoryJSON.inventory.item != null){
