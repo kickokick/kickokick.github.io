@@ -70,6 +70,16 @@ nav {
     padding-left: 1rem;
 
 }
+#logo{
+    flex-basis: 20%;
+}
+#Inv {
+    flex-basis: 80%;
+    align-self: right;
+}
+a{
+    text-decoration: none;
+}
 
 .NavSect:hover{
     opacity: .5;
