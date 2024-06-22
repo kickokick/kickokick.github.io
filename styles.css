@@ -75,7 +75,7 @@ nav {
 }
 #Inv {
     flex-basis: 80%;
-    align-self: right;
+    padding-left: 50%;
 }
 a{
     text-decoration: none;
