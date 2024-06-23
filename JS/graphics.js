@@ -1,8 +1,8 @@
 const app = new PIXI.Application();
 await app.init({ width: 640, height: 360, canvas: document.getElementById("app") });
 
-await PIXI.Assets.load('./sample.png');
-let sprite = PIXI.Sprite.from('./sample.png');
+await PIXI.Assets.load('./assets/cat.png');
+let sprite = PIXI.Sprite.from('./assets/cat.png');
 app.stage.addChild(sprite);
 
 let elapsed = 0.0;

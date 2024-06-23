@@ -2,10 +2,13 @@ let fish = 0;
 let autoCount = 0;
 let aCost = 10;
 let text = "Fish: " + fish;
+let catTick = 0;
+let enemyTick = 0;
 
 const counter = document.getElementById("change");
 const actionText = document.getElementById("action");
 const autoOne = document.getElementById("autoOne");
+
 
 
 function Click(){
@@ -30,11 +33,27 @@ function Buy(){
 }
 
 function Increment(){
-    const update = setInterval(function(){
+    const update = setInterval(function() {
         fish = (fish + (autoCount*1)) * 100;
         fish = Math.round(fish) / 100;
         text = "Fish: " + fish;
         counter.textContent = text;
         autoOne.textContent = "You own " + autoCount + " Automatic Clickers";
+    }, 100);
+
+    const combat = setInterval(function() {
+        
+        if (catTick == 0) {
+            catTick = haste();
+            console.log(catTick);
+        }
+        if (enemyTick == 0) {
+            enemyTick = 100;
+            console.log(enemyTick);
+        }
+        
+        catTick--;
+        enemyTick--;
+        
     }, 100);
 }

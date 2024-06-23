@@ -1,12 +1,25 @@
 let inventoryJSON = {};
+
+const uniqueItems = {
+    stick: {
+        damage: 2
+    },
+    sword: {
+        damage: 10
+    }
+}
+
 const invObj = document.getElementById('inventory');
 
-function add(item, count){
-    if (inventoryJSON[item] == null) {
+function add(item, count) {
+    if (uniqueItems[item] != null && inventoryJSON[item] == null) {
+        inventoryJSON[item] = uniqueItems[item];
+    }
+    else if (inventoryJSON[item] == null) {
         inventoryJSON[item] = {};
         inventoryJSON[item].num = count;
     }
-    else {
+    else if (uniqueItems[item] == null){
         inventoryJSON[item].num += count;
     }
     invObj.innerHTML = invString(inventoryJSON);
@@ -21,6 +34,6 @@ function invString(inventory) {
     return string;
 }
 
-function remove(item, count){
+function remove(item, count) {
     inventoryJSON[item].num -= count;
 }
