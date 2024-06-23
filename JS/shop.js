@@ -1,5 +1,5 @@
 const shop = {
-    yarn: {
+    Yarn: {
         baseCost: 20,
         growth: 1.7
     }

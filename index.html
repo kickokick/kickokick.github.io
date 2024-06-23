@@ -24,13 +24,17 @@
         </section>
 
         <section class="button">
-            <button onclick="Click();">Click</button>
-            <button onclick="Buy()" id='autoclicker'>Buy Autoclicker (10)</button>
-            <section id="shop">
-                <button onclick="buy('yarn')" id="yarn"> Buy Yarn (20) </button>
+            <section class="act">
+                <button onclick="Click();">Click</button>
+                <button onclick="changeEnemy('Catipillar')">Fight Catipillar</button>
+                <button onclick="changeEnemy('Nothing')">Fight Nothing</button>
             </section>
-            <button onclick="changeEnemy('Catipillar')">Fight Catipillar</button>
-            <button onclick="changeEnemy('Nothing')">Fight Nothing</button>
+            
+            <section class="shop">
+                <button onclick="Buy()" id='autoclicker'>Buy Autoclicker (10)</button>
+                <button onclick="buy('Yarn')" id="yarn"> Buy Yarn (20) </button>
+            </section>
+            
             
         </section>
 
