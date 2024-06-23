@@ -22,10 +22,9 @@ function equip(item, slot) {
     }
 }
 
-function haste() {
-    return 50 - catStats.haste;
-}
-
 function damage() {
+    if (inventoryJSON[catStats.equipped.hand] == null){
+        return catStats.strength;
+    }
     return catStats.strength + inventoryJSON[catStats.equipped.hand].damage;
 }

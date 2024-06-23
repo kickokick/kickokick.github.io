@@ -18,6 +18,7 @@
             <p id="action">Nothing</p>
             <p id="inventory"></p>
             <p id="change">Count: 0</p> <p id="autoOne"></p>
+            <p id="enemy">Current Enemy: Nothing</p>
             
             
         </section>
@@ -28,6 +29,9 @@
             <section id="shop">
                 <button onclick="buy('yarn')" id="yarn"> Buy Yarn (20) </button>
             </section>
+            <button onclick="changeEnemy('Catipillar')">Fight Catipillar</button>
+            <button onclick="changeEnemy('Nothing')">Fight Nothing</button>
+            
         </section>
 
         <section class="GameCanvas">
@@ -41,6 +45,7 @@
         <script type="text/javascript" src="./JS/cat.js"></script>
         <script type="text/javascript" src="./JS/enemies.js"></script>
         <script type="text/javascript" src="./JS/cookie.js"></script>
+        <script type="text/javascript" src="./JS/combat.js"></script>
         <script type="module" src="./JS/graphics.js"></script>
     </body>
     <style>

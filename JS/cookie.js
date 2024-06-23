@@ -3,6 +3,8 @@
 
 USE https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage INSTEAD
 
+*/
+
 let fishElement = "";
 let fishCount = "";
 let cookieText = "";
@@ -25,4 +27,3 @@ function onLoadUpdate(){
     fishElement.innerHTML = "Fish: " + cookieText;
     console.log(fishElement.innerHTML);
 }
-*/
