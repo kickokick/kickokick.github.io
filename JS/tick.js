@@ -14,16 +14,12 @@ function Click(){
     text = "Fish: " + fish;
     console.log(text);
     counter.textContent = text;
-    actionText.textContent = "You clicked";
 }
 
 function Buy(){
     if (fish >= aCost){
         fish = fish - aCost;
         autoCount = autoCount + 1;
-        actionText.textContent = "You bought an auto clicker";
-    } else {
-        actionText.textContent = "sorry pal ur too broke";
     }
     
     aCost = (10 * Math.pow(1.5, autoCount)).toFixed(2);

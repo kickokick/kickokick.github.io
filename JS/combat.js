@@ -59,7 +59,7 @@ function resetEnemy(){
 const combat = setInterval(function() {
 
     getCurrentEnemy();
-    
+    actionText.innerHTML = getCurrentEnemy() + " Health: " + currentEnemyData.health;
     if (currentEnemyData.health <= 0){
         resetEnemy();
         console.log("Congrats you killed an innocent something");
