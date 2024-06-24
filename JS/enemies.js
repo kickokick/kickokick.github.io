@@ -1,3 +1,5 @@
+//Dictionary for enemies
+
 const enemies = {
     Bird: {
         health: 50,

@@ -1,3 +1,4 @@
+//Item cost
 const shop = {
     Yarn: {
         baseCost: 20,
@@ -6,6 +7,7 @@ const shop = {
 }
 let cost = 0;
 
+//Ofc theres two Buy functions, great job shashish
 function buy(item) {
     if (inventoryJSON[item] == null) {
         cost = shop[item].baseCost;

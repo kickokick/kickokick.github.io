@@ -1,5 +1,6 @@
+//TODO: SETH DO IT
 const app = new PIXI.Application();
-await app.init({ width: 1080, height: 360, canvas: document.getElementById("app") });
+await app.init({ width: 1080, height: 360, canvas: document.getElementById("app") }); //Initialize 
 
 await PIXI.Assets.load('./assets/cat.png');
 await PIXI.Assets.load('./assets/Catipillar.png');
@@ -18,6 +19,7 @@ app.ticker.add((ticker) => {
     enemy.y = 100
 });
 
+//Combat anims
 function catAttack() {
 
 }

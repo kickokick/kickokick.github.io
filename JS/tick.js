@@ -1,3 +1,4 @@
+//Vars and suff
 let fish = 0;
 let autoCount = 0;
 let aCost = 10;
@@ -8,7 +9,7 @@ const actionText = document.getElementById("action");
 const autoOne = document.getElementById("autoOne");
 
 
-
+//Click
 function Click(){
     fish = fish + 1;
     text = "Fish: " + fish;
@@ -16,6 +17,7 @@ function Click(){
     counter.textContent = text;
 }
 
+//Buy autoclicker
 function Buy(){
     if (fish >= aCost){
         fish = fish - aCost;
@@ -26,6 +28,8 @@ function Buy(){
     document.getElementById("autoclicker").innerHTML = "Buy autoclicker (" + aCost + ")";
 }
 
+
+//Autoclicker Increment
 function Increment(){
     const update = setInterval(function() {
         fish = (fish + (autoCount*1)) * 100;
