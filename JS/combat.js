@@ -14,22 +14,13 @@ let currentEnemyData = {
 function changeEnemy(name){
     currentEnemyFull = document.getElementById("enemy");
 
-    if (name == "Catipillar"){
-        currentEnemyFull.innerHTML = "Current Enemy: Catipillar";
+        currentEnemyFull.innerHTML = `Current Enemy: ${name}`;
 
-        currentEnemyData.health = enemies.catipillar.health;
-        currentEnemyData.damage = enemies.catipillar.damage;
-        currentEnemyData.haste = enemies.catipillar.haste;
+        currentEnemyData.health = enemies[name].health;
+        currentEnemyData.damage = enemies[name].damage;
+        currentEnemyData.haste = enemies[name].haste;
 
-        console.log(currentEnemyData);
-    } else if (name == "Nothing"){
 
-        currentEnemyFull.innerHTML = "Current Enemy: Nothing";
-
-        currentEnemyData.health = enemies.nothing.health;
-        currentEnemyData.damage = enemies.nothing.damage;
-        currentEnemyData.haste = enemies.nothing.haste;
-    }
 }
 
 
@@ -48,7 +39,9 @@ function resetEnemy(){
     currentEnemy = getCurrentEnemy();
     if (currentEnemy == "Catipillar"){
 
-        currentEnemyData = enemies.catipillar;
+        currentEnemyData.health = enemies.catipillar.health;
+        currentEnemyData.damage = enemies.catipillar.damage;
+        currentEnemyData.haste = enemies.catipillar.haste;
         console.log(currentEnemyData);
         console.log(enemies.catipillar);
 
