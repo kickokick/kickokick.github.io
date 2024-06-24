@@ -12,7 +12,7 @@ const autoOne = document.getElementById("autoOne");
 //Click
 function Click(){
     fish = fish + 1;
-    text = "Fish: " + fish;
+    text = "Fish: " + fish; 
     console.log(text);
     counter.textContent = text;
 }
