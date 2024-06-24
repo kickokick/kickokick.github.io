@@ -45,6 +45,7 @@ const combat = setInterval(function() {
         nothingSelected = !nothingSelected;
     } else 
         actionText.innerHTML = "Nothing Selected"
+    
     //When dies
     if (currentEnemyData.health <= 0){
         resetEnemy();
