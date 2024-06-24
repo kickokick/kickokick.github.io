@@ -18,13 +18,17 @@ function changeEnemy(name) {
 }
 
 function resetEnemy() {
-    currentEnemyData.health = enemies[currentEnemyData.name].health;
-    currentEnemyData.damage = enemies[currentEnemyData.name].damage;
-    currentEnemyData.haste = enemies[currentEnemyData.name].haste;
+    let name = enemies[currentEnemyData.name]
+    currentEnemyData.health = name.health;
+    currentEnemyData.damage = name.damage;
+    currentEnemyData.haste = name.haste;
 }
 
 const combat = setInterval(function() {
-    actionText.innerHTML = currentEnemyData.name + " Health: " + currentEnemyData.health;
+    if(currentEnemyData.name != null){
+        actionText.innerHTML = currentEnemyData.name + " Health: " + currentEnemyData.health;
+    } else
+        actionText.innerHTML = "Nothing Selected"
 
     if (currentEnemyData.health <= 0){
         resetEnemy();

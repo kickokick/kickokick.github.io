@@ -61,7 +61,9 @@ button:hover {
     gap: 10px;
     
 }
-
+#cat{
+    font-size: larger;
+}
 .shop {
     display: flex;
     justify-content: center;
@@ -92,7 +94,7 @@ nav {
 
 }
 #logo{
-    flex-basis: 20%;
+    flex-basis: 25%;
 }
 #Inv {
     flex-basis: 80%;

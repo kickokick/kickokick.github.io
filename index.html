@@ -4,21 +4,23 @@
         <title>Cat Idle</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <script src="https://pixijs.download/release/pixi.js"></script>
+        <script src="https://kit.fontawesome.com/b207e5c327.js" crossorigin="anonymous"></script>
     </head>
     <body onload="Increment()">
 
         <nav>
 
-            <h1 id="logo" class="NavSect">Super Cat Idol</h1>
+            <h1 id="logo" class="NavSect">Super Cat Idol <i class="fa-solid fa-cat" id="cat"></i> </h1>
             <a href="inventory.html" id="Inv"class="NavSect">Inventory</a>
             
         </nav>
 
         <section class="info">
-            <p id="action">Nothing</p>
+            
             <p id="inventory"></p>
             <p id="change">Count: 0</p> <p id="autoOne"></p>
             <p id="enemy">Current Enemy: Nothing</p>
+            <p id="action">Nothing</p>
             
             
         </section>
@@ -26,8 +28,8 @@
         <section class="button">
             <section class="act">
                 <button onclick="Click();">Click</button>
-                <button onclick="changeEnemy('catipillar')">Fight Catipillar</button>
-                <button onclick="changeEnemy('nothing')">Fight Nothing</button>
+                <button onclick="changeEnemy('Catipillar')">Fight Catipillar</button>
+                <button onclick="changeEnemy('Bird')">Fight Bird</button>
             </section>
             
             <section class="shop">

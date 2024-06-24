@@ -1,11 +1,11 @@
 const enemies = {
-    nothing: {
-        health: null,
-        damage: null,
-        haste: null
+    Bird: {
+        health: 50,
+        damage: 20,
+        haste: 3
     },
-    catipillar: {
-        health: 100,
+    Catipillar: {
+        health: 30,
         damage: 10,
         haste: 2
     }
