@@ -45,24 +45,26 @@ const combat = setInterval(function() {
         nothingSelected = !nothingSelected;
     } else 
         actionText.innerHTML = "Nothing Selected"
-    
-    //When dies
-    if (currentEnemyData.health <= 0){
-        resetEnemy();
-        awardPoints(currentEnemyData.name);
-        console.log("Congrats you killed an innocent something");
-    }//tick stuff
-    if (!(catTick == 0)) {
-        catTick -= catStats.haste;
-        console.log(catTick);
-    } else {
-        catTick = 50;
-        currentEnemyData.health -= damage();
-        console.log("CURRENT HEALTH: " + currentEnemyData.health);
-    }
 
-    if (enemyTick == 0) {
-        enemyTick = 100;
-        console.log(enemyTick);
-    }        
+    if(nothingSelected == false){
+        //When dies
+        if (currentEnemyData.health <= 0){
+            resetEnemy();
+            awardPoints(currentEnemyData.name);
+            console.log("Congrats you killed an innocent something");
+        }//tick stuff
+        if (!(catTick == 0)) {
+            catTick -= catStats.haste;
+            console.log(catTick);
+        } else {
+            catTick = 50;
+            currentEnemyData.health -= damage();
+            console.log("CURRENT HEALTH: " + currentEnemyData.health);
+        }
+
+        if (enemyTick == 0) {
+            enemyTick = 100;
+            console.log(enemyTick);
+        }        
+    }
 }, 100);
