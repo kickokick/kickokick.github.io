@@ -37,7 +37,7 @@ function invString(inventory) {
 function remove(item, count) {
     inventoryJSON[item].num -= count;
 }
-function displayIventory() {
+function displayInventory() {
     var popup = document.getElementById("inventory");
     popup.classList.toggle("show");
   }
