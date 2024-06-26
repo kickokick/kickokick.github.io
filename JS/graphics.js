@@ -1,5 +1,5 @@
 //TODO: SETH DO IT
-let num = 0.002;
+let num = 0.007;
 const app = new PIXI.Application();
 await app.init({ width: 1200, height: 400, canvas: document.getElementById("app") }); //Initialize 
 
@@ -12,6 +12,7 @@ app.stage.addChild(cat);
 let enemy = PIXI.Sprite.from('./assets/Catipillar.png');
 app.stage.addChild(enemy);
 
+//change rotation spot to middle of sprite
 cat.anchor.x = 0.5;
 cat.anchor.y = 0.5;
 
@@ -26,6 +27,8 @@ app.ticker.add((ticker) => {
 });
 
 //Combat anims
+
+//rotates cat to make it look like its attacking
 function catAttack() {
     cat.rotation += num;
     if(cat.rotation > .5 || cat.rotation < 0){

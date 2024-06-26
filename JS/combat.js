@@ -1,7 +1,6 @@
 //vars and dictionary
 let catTick = 50;
 let enemyTick = 100;
-let nothingSelected = true;
 let catsHealth = document.getElementById("catHealth");
 
 let catData = {
@@ -50,34 +49,35 @@ const combat = setInterval(function() {
     //dipslay health
     if(currentEnemyData.name != null){
         actionText.innerHTML = currentEnemyData.name + " Health: " + currentEnemyData.health;
-        nothingSelected = !nothingSelected;
+        catsHealth.innerHTML = `Cat's Health: ${catData.health}`;
+        //When dies
+                if (currentEnemyData.health <= 0){
+                    resetEnemy();
+                    awardPoints(currentEnemyData.name);
+                    catData.health = 100;
+                    console.log("Congrats you killed an innocent something");
+                }//tick stuff
+                if (!(catTick == 0)) {
+                    catTick -= catStats.haste;
+                    //console.log(catTick);
+                } else {
+                    catTick = 50;
+                    currentEnemyData.health -= damage();
+                    //console.log("CURRENT HEALTH: " + currentEnemyData.health);
+                }
+
+                //enemies attacks
+                if (enemyTick == 0) {
+                    enemyTick = 100;
+                    catData.health -= currentEnemyData.damage;
+                    
+                    //console.log(enemyTick);
+                } else{
+                    enemyTick -= currentEnemyData.haste;
+                }
     } else 
         actionText.innerHTML = "Nothing Selected"
 
-    if(nothingSelected == false){
-        //When dies
-        if (currentEnemyData.health <= 0){
-            resetEnemy();
-            awardPoints(currentEnemyData.name);
-            catData.health = 0;
-            console.log("Congrats you killed an innocent something");
-        }//tick stuff
-        if (!(catTick == 0)) {
-            catTick -= catStats.haste;
-            //console.log(catTick);
-        } else {
-            catTick = 50;
-            currentEnemyData.health -= damage();
-            //console.log("CURRENT HEALTH: " + currentEnemyData.health);
-        }
-
-        if (enemyTick == 0) {
-            enemyTick = 100;
-            catData.health -= currentEnemyData.damage;
-            catsHealth.innerHTML = `Cat's Health: ${catData.health}`;
-            //console.log(enemyTick);
-        } else{
-            enemyTick -= currentEnemyData.haste;
-        }
-    }
+        
+    
 }, 100);
