@@ -2,6 +2,14 @@
 let catTick = 50;
 let enemyTick = 100;
 let nothingSelected = true;
+let catsHealth = document.getElementById("catHealth");
+
+let catData = {
+    name: "bob",
+    health: 100,
+    damage: 10,
+    haste: 2,
+}
 
 let currentEnemyData = {
     name: null,
@@ -51,20 +59,25 @@ const combat = setInterval(function() {
         if (currentEnemyData.health <= 0){
             resetEnemy();
             awardPoints(currentEnemyData.name);
+            catData.health = 0;
             console.log("Congrats you killed an innocent something");
         }//tick stuff
         if (!(catTick == 0)) {
             catTick -= catStats.haste;
-            console.log(catTick);
+            //console.log(catTick);
         } else {
             catTick = 50;
             currentEnemyData.health -= damage();
-            console.log("CURRENT HEALTH: " + currentEnemyData.health);
+            //console.log("CURRENT HEALTH: " + currentEnemyData.health);
         }
 
         if (enemyTick == 0) {
             enemyTick = 100;
-            console.log(enemyTick);
-        }        
+            catData.health -= currentEnemyData.damage;
+            catsHealth.innerHTML = `Cat's Health: ${catData.health}`;
+            //console.log(enemyTick);
+        } else{
+            enemyTick -= currentEnemyData.haste;
+        }
     }
 }, 100);
