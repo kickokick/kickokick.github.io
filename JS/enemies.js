@@ -3,9 +3,9 @@
 const enemies = {
     Bird: {
         health: 50,
-        damage: 20,
+        damage: 30,
         haste: 3,
-        fish: 20,
+        fish: 30,
     },
     Catipillar: {
         health: 30,

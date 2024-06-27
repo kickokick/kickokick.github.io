@@ -3,12 +3,8 @@ let catTick = 50;
 let enemyTick = 100;
 let catsHealth = document.getElementById("catHealth");
 
-let catData = {
-    name: "bob",
-    health: 100,
-    damage: 10,
-    haste: 2,
-}
+
+
 
 let currentEnemyData = {
     name: null,
@@ -43,21 +39,27 @@ function awardPoints(name){
     fish += currentEnemyData.fish;
 }
 
+//remove points for dying
+function died(){
+    catStats.currentHealth = catStats.maxHealth;
+    fish -= 50;
+}
+
 //combat loop/interval
 // TODO: Enemy attack back and animations, also display info
 const combat = setInterval(function() {
     //dipslay health
     if(currentEnemyData.name != null){
         actionText.innerHTML = currentEnemyData.name + " Health: " + currentEnemyData.health;
-        catsHealth.innerHTML = `Cat's Health: ${catData.health}`;
+        catsHealth.innerHTML = `Cat's Health: ${catStats.currentHealth}`;
         //When dies
                 if (currentEnemyData.health <= 0){
                     resetEnemy();
                     awardPoints(currentEnemyData.name);
-                    catData.health = 100;
+                    catStats.currentHealth = catStats.maxHealth;
                     console.log("Congrats you killed an innocent something");
                 }//tick stuff
-                if (!(catTick == 0)) {
+                if (!(catTick <= 0)) {
                     catTick -= catStats.haste;
                     //console.log(catTick);
                 } else {
@@ -66,10 +68,15 @@ const combat = setInterval(function() {
                     //console.log("CURRENT HEALTH: " + currentEnemyData.health);
                 }
 
-                //enemies attacks
-                if (enemyTick == 0) {
+                //Cat Dies
+                if (catStats.currentHealth <= 0){
+                    died();
+                }
+
+                //enemie attacks
+                if (enemyTick <= 0) {
                     enemyTick = 100;
-                    catData.health -= currentEnemyData.damage;
+                    catStats.currentHealth -= currentEnemyData.damage;
                     
                     //console.log(enemyTick);
                 } else{
